@@ -1,0 +1,104 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1643980961390-8382f8b46c43?q=80&w=2105&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #00000083;
+    border-radius: 5px;
+    margin-top: 30px; 
+    color: #cbd5e0; 
+    padding-bottom: 60px; 
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #fff; 
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #cbd5e0; 
+    border-radius: 5px;
+    background-color: #000000; 
+    color: #cbd5e0; 
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+select:focus {
+    outline: none;
+    border-color: #dc2626;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ef4444; 
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #dc2626; /* Darker shade of red on hover */
+}
+
+
+.form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #cbd5e0;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: #dc2626;
+}
+
+/* Style the dropdown arrow */
+.form-group select::-ms-expand {
+    display: none;
+}
+
+.form-group option {
+    background-color: #00000088;
+    color: #cbd5e0;
+}
+
+/* Style the hover effect on options */
+.form-group option:hover {
+    background-color: #f0f0f0;
+}
