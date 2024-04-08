@@ -1,56 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking Details</title>
-    <link rel="stylesheet" href="booking.component.css">
-</head>
-
 <body>
     <div class="container">
         <h2>Booking Details</h2>
-        <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name">
-        </div>
-        <div class="form-group">
-            <label for="vehicleName">Vehicle Number:</label>
-            <input type="text" id="vehicleName" name="vehicleName" class="form-control"
-                placeholder="Enter vehicle number">
-        </div>
-        <div class="form-group">
-            <label for="vehicleType">Vehicle Type:</label>
-            <select id="vehicleType" name="vehicleType" class="form-control">
-                <option value="Bike">Bike</option>
-                <option value="Car">Car</option>
-                <option value="Van">Van</option>
-                <option value="Others">Others</option>
-            </select>
+        <form [formGroup]="userForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" placeholder="Enter your name" formControlName="Name">
+                <div class="text-red-500 text-sm"
+                    *ngIf="userForm.controls['Name'].invalid  &&(userForm.controls['Name'].touched || userForm.controls['Name'].dirty || isFormSubmitted)">
+                    <span *ngIf="userForm.controls['Name'].errors?.['required']"> Please enter a name</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="vehicleName">Vehicle Number:</label>
+                <input type="text" class="form-control" placeholder="Enter vehicle number"
+                    formControlName="vehicleNumber">
+                <div class="text-red-500 text-sm"
+                    *ngIf="userForm.controls['vehicleNumber'].invalid  && (userForm.controls['vehicleNumber'].touched || userForm.controls['vehicleNumber'].dirty || isFormSubmitted)">
+                    <span *ngIf="userForm.controls['vehicleNumber'].errors?.['required']"> Please enter a vehicle
+                        number</span>
+                    <span *ngIf="userForm.controls['vehicleNumber'].errors?.['maxlength']"> Please enter a valid vehicle
+                        number</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="vehicleType">Vehicle Type:</label>
+                <select id="vehicleType" name="vehicleType" class="form-control">
+                    <option value="Bike">Bike</option>
+                    <option value="Car">Car</option>
+                    <option value="Van">Van</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="contactNumber">Contact Number:</label>
+                <input type="tel" id="contactNumber" name="contactNumber" class="form-control"
+                    placeholder="Enter contact number" formControlName="contactNumber">
+                <div class="text-red-500 text-sm"
+                    *ngIf="userForm.controls['contactNumber'].invalid && (userForm.controls['contactNumber'].touched || userForm.controls['contactNumber'].dirty || isFormSubmitted)">
+                    <span *ngIf="userForm.controls['contactNumber'].errors?.['required']"> Please enter your contact
+                        number</span>
+                    <span *ngIf="userForm.controls['contactNumber'].errors?.['maxlength']"> Please enter a valid
+                        number</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" class="form-control" formControlName="date">
+                <div class="text-red-500 text-sm"
+                    *ngIf="userForm.controls['date'].invalid  && (userForm.controls['date'].touched || userForm.controls['date'].dirty || isFormSubmitted)">
+                    <span *ngIf="userForm.controls['date'].errors?.['required']"> Please enter a date</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="arrivalTime" class="block text-sm font-medium text-gray-300">Arrival Time:</label>
+                <div class="mt-1 flex rounded-md shadow-sm">
+                    <input type="number" min="1" max="12"
+                        class="black-input appearance-none block w-1/4 px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                        placeholder="HH" formControlName="arrivalTime">
+                    <span
+                        class="inline-flex items-center px-3 border border-l-0 border-gray-300 bg-gray-50 text-gray-300 text-sm">:</span>
+                    <input type="number" min="0" max="59"
+                        class="black-input appearance-none block w-1/4 px-3 py-2 border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                        placeholder="MM" formControlName="arrivalTime">
+                    <select
+                        class="black-input appearance-none block w-1/4 px-3 py-2 border border-gray-300 rounded-r-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                        formControlName="arrivalTime">
+                        <option>AM</option>
+                        <option>PM</option>
+                    </select>
+                </div>
+                <div class="text-red-500 text-sm"
+                    *ngIf="userForm.controls['arrivalTime'].invalid && userForm.controls['arrivalTime'].touched || userForm.controls['arrivalTime'].dirty || isFormSubmitted">
+                    <span *ngIf="userForm.controls['arrivalTime'].errors?.['required']">Please enter a valid time</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="departureTime" class="block text-sm font-medium text-gray-300">Departure Time:</label>
+                <div class="mt-1 flex rounded-md shadow-sm">
+                    <input type="number" min="1" max="12"
+                        class="black-input appearance-none block w-1/4 px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                        placeholder="HH" formControlName="departureTime">
+                    <span
+                        class="inline-flex items-center px-3 border border-l-0 border-gray-300 bg-gray-50 text-white text-sm">:</span>
+                    <input type="number" min="0" max="59"
+                        class="black-input appearance-none block w-1/4 px-3 py-2 border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                        placeholder="MM" formControlName="departureTime">
+                    <select
+                        class="black-input appearance-none block w-1/4 px-3 py-2 border border-gray-300 rounded-r-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                        formControlName="departureTime">
+                        <option>AM</option>
+                        <option>PM</option>
+                    </select>
+                </div>
+                <div class="text-red-500 text-sm"
+                *ngIf="userForm.controls['departureTime'].invalid && userForm.controls['departureTime'].touched || userForm.controls['departureTime'].dirty || isFormSubmitted">
+                <span *ngIf="userForm.controls['departureTime'].errors?.['required']">Please enter a valid time</span>
+            </div>
         </div>
 
-        <div class="form-group">
-            <label for="contactNumber">Contact Number:</label>
-            <input type="tel" id="contactNumber" name="contactNumber" class="form-control"
-                placeholder="Enter contact number">
-        </div>
-        <div class="form-group">
-            <label for="date">Date:</label>
-            <input type="date" id="date" name="date" class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label for="arrivalTime">Arrival Time:</label>
-            <input type="time" id="arrivalTime" name="arrivalTime" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="departureTime">Departure Time:</label>
-            <input type="time" id="departureTime" name="departureTime" class="form-control">
-        </div>
-        
-        <button class="button">Book Now</button>
+            <div>
+                <button type="button" class="button" (click)="onSubmit()">Book Now</button>
+            </div>
+        </form>
     </div>
 </body>
-
-</html>
+<link rel="stylesheet" href="booking.component.css">

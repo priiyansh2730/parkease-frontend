@@ -1,4 +1,4 @@
-html,
+
 body {
     height: 100%;
     margin: 0;
@@ -8,17 +8,23 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
 }
 
 .container {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #00000083;
+    background-color: #000000d7;
     border-radius: 5px;
     margin-top: 30px; 
     color: #cbd5e0; 
     padding-bottom: 60px; 
+}
+
+.black-input {
+    background-color: rgb(0, 0, 0); 
 }
 
 h2 {
@@ -72,6 +78,9 @@ button:hover {
     background-color: #dc2626; /* Darker shade of red on hover */
 }
 
+    
+
+
 
 .form-group select {
     width: 100%;
@@ -102,3 +111,4 @@ button:hover {
 .form-group option:hover {
     background-color: #f0f0f0;
 }
+
