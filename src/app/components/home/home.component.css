@@ -1,22 +1,34 @@
 body {
+<<<<<<< HEAD
   background-image: url('https://images.unsplash.com/photo-1439792675105-701e6a4ab6f0?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+=======
+>>>>>>> ca8fcd78daf0569b2106cfb297cb70f5deb87815
   height: 100%;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+<<<<<<< HEAD
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
+=======
+>>>>>>> ca8fcd78daf0569b2106cfb297cb70f5deb87815
 }
 
 body {
   display: flex;
   flex-direction: column;
   background-color: #141414;
+<<<<<<< HEAD
 }
 
 
+=======
+  color: #cbd5e0;
+}
+
+>>>>>>> ca8fcd78daf0569b2106cfb297cb70f5deb87815
 .container {
   max-width: 1140px;
   margin-left: auto;
@@ -25,7 +37,10 @@ body {
   width: 100%;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ca8fcd78daf0569b2106cfb297cb70f5deb87815
 .sect-hd {
   margin-bottom: 20px;
 }
@@ -33,7 +48,11 @@ body {
 .sect-hd h1 {
   font-size: 2rem;
   font-weight: 500;
+<<<<<<< HEAD
   color: #000000;
+=======
+  color: #fff;
+>>>>>>> ca8fcd78daf0569b2106cfb297cb70f5deb87815
   margin-bottom: 10px;
 }
 
@@ -50,7 +69,11 @@ body {
 }
 
 .card {
+<<<<<<< HEAD
   background-color: #000000c2;
+=======
+  background-color: #000000bd;
+>>>>>>> ca8fcd78daf0569b2106cfb297cb70f5deb87815
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 30px;
@@ -67,7 +90,12 @@ body {
 
 .card h2 {
   font-size: 1.25rem;
+<<<<<<< HEAD
   font-weight: bold;
+=======
+  font-weight: 500;
+  color: #fff;
+>>>>>>> ca8fcd78daf0569b2106cfb297cb70f5deb87815
   margin-bottom: 10px;
 }
 
@@ -86,7 +114,11 @@ body {
 
 .footer {
   background-color: #000;
+<<<<<<< HEAD
   color: #ffffff;
+=======
+  color: #cbd5e0;
+>>>>>>> ca8fcd78daf0569b2106cfb297cb70f5deb87815
   padding: 40px 0;
   text-align: center;
 }
@@ -103,7 +135,11 @@ body {
 }
 
 .footer ul li a {
+<<<<<<< HEAD
   color: #f8f8f8;
+=======
+  color: #cbd5e0;
+>>>>>>> ca8fcd78daf0569b2106cfb297cb70f5deb87815
   text-decoration: none;
 }
 
@@ -115,11 +151,14 @@ body {
   font-size: 0.875rem;
 }
 
+<<<<<<< HEAD
 .black-container {
   background-color: black;
   padding: 20px;
 }
 
+=======
+>>>>>>> ca8fcd78daf0569b2106cfb297cb70f5deb87815
 .container-8 {
   margin-bottom: 40px;
   margin-top: 50px;
@@ -129,6 +168,7 @@ body {
 html {
   height: 100%;
 }
+<<<<<<< HEAD
 .container-49{
   background-color: #00000000;
   padding-left: 10px;
@@ -149,6 +189,11 @@ html {
 
 body {
 
+=======
+
+body {
+  min-height: 100%;
+>>>>>>> ca8fcd78daf0569b2106cfb297cb70f5deb87815
   display: flex;
   flex-direction: column;
 }
